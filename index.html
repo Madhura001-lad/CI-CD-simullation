@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Pipeline Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚀 CI/CD Pipeline Simulator</h1>
+    <p>Understand the software delivery process interactively.</p>
+</header>
+
+<main>
+    <section class="dashboard">
+        <h2>Pipeline Dashboard</h2>
+
+        <p>
+            Pipeline Status:
+            <span id="pipelineStatus">Not Started</span>
+        </p>
+
+        <button id="runButton">▶ Run Pipeline</button>
+        <button id="resetButton">↻ Reset</button>
+
+        <div class="pipeline">
+
+            <div class="stage" id="stage1">
+                <h3>1. Checkout</h3>
+                <p>Get source code</p>
+                <span class="status">Pending</span>
+            </div>
+
+            <div class="stage" id="stage2">
+                <h3>2. Build</h3>
+                <p>Prepare application</p>
+                <span class="status">Pending</span>
+            </div>
+
+            <div class="stage" id="stage3">
+                <h3>3. Test</h3>
+                <p>Check code quality</p>
+                <span class="status">Pending</span>
+            </div>
+
+            <div class="stage" id="stage4">
+                <h3>4. Docker</h3>
+                <p>Simulate image creation</p>
+                <span class="status">Pending</span>
+            </div>
+
+            <div class="stage" id="stage5">
+                <h3>5. Deploy</h3>
+                <p>Simulate deployment</p>
+                <span class="status">Pending</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="logs">
+        <h2>Pipeline Logs</h2>
+        <div id="logOutput" aria-live="polite">
+            <p>Waiting for pipeline execution...</p>
+        </div>
+    </section>
+
+    <section class="history">
+        <h2>Pipeline History</h2>
+        <ul id="historyList">
+            <li>No pipeline runs yet.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>CI/CD Pipeline Simulator | HTML, CSS & JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

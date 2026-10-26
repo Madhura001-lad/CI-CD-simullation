@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f1f5f9;
+color: #1e293b;
+}
+
+header {
+background: #172554;
+color: white;
+text-align: center;
+padding: 25px 15px;
+}
+
+header h1 {
+margin-top: 0;
+}
+
+main {
+width: 90%;
+max-width: 1100px;
+margin: 25px auto;
+}
+
+.dashboard,
+.logs,
+.history {
+background: white;
+padding: 22px;
+margin-bottom: 20px;
+border-radius: 10px;
+box-shadow: 0 3px 10px #00000010;
+}
+
+button {
+padding: 11px 18px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin: 5px;
+font-size: 15px;
+}
+
+#runButton {
+background: #2563eb;
+color: white;
+}
+
+#resetButton {
+background: #64748b;
+color: white;
+}
+
+button:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+.pipeline {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 15px;
+margin-top: 25px;
+}
+
+.stage {
+padding: 18px 12px;
+text-align: center;
+background: #f8fafc;
+border: 2px solid #cbd5e1;
+border-radius: 8px;
+overflow-wrap: anywhere;
+}
+
+.stage h3 {
+font-size: 17px;
+}
+
+.stage p {
+font-size: 13px;
+color: #64748b;
+}
+
+.status {
+display: inline-block;
+margin-top: 8px;
+padding: 6px 10px;
+background: #e2e8f0;
+border-radius: 15px;
+font-size: 12px;
+}
+
+.stage.running {
+border-color: #2563eb;
+background: #eff6ff;
+}
+
+.stage.running .status {
+background: #dbeafe;
+color: #1d4ed8;
+}
+
+.stage.success {
+border-color: #16a34a;
+background: #f0fdf4;
+}
+
+.stage.success .status {
+background: #dcfce7;
+color: #166534;
+}
+
+.stage.failed {
+border-color: #dc2626;
+background: #fef2f2;
+}
+
+.stage.failed .status {
+background: #fee2e2;
+color: #991b1b;
+}
+
+#pipelineStatus {
+font-weight: bold;
+}
+
+#logOutput {
+background: #0f172a;
+color: #86efac;
+padding: 15px;
+border-radius: 6px;
+min-height: 80px;
+overflow-wrap: anywhere;
+}
+
+#logOutput p {
+margin: 8px 0;
+}
+
+footer {
+text-align: center;
+padding: 18px;
+background: #172554;
+color: white;
+}
+
+@media (max-width: 600px) {
+main {
+width: 94%;
+}
+
+
+.dashboard,
+.logs,
+.history {
+    padding: 15px;
+}
+
+}
